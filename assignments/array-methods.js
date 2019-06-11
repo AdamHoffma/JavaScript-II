@@ -55,10 +55,9 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
-let fullName = [];
-    runners.forEach(function(___, index, arr) {
-    fullName.push(`${arr[index].first_name} ${arr[index].last_name}`)
-    })
+let fullName = 
+    runners.forEach(function(firstlast) {
+return firstlast.first_name.last_name })
 
 
 console.log(fullName);
@@ -95,8 +94,34 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 [Let's put the first names in alphabetical order]
 
-// Problem 2
+let alphabetical = runners.map(function(ABC) {
+    return ABC.first_name
+})
+console.log(alphabetical.sort())
 
-// Problem 3
+// Problem 2 [Let's sort donations by size]
+
+let donation = runners.map(function(don) {
+    return don.donation
+  
+})
+
+console.log(donation.sort())
+
+// Problem 3 [Let's remove anyone that donated less then 100$]
+
+let cheapskate = runners.filter(function(lessthan) {
+    return lessthan.donation > 100
+})
+console.log(cheapskate)
+
+
+
+
+//let largeShirts = runners.filter(function(shirtsize) {
+    
+    ////return shirtsize.shirt_size === "L";
+    
+//})
